@@ -1,34 +1,171 @@
+```html
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>XIBOINXBARBIRBER | Koleksi Musik</title>
-<style>
-:root{--bg:#090914;--panel:#151527;--muted:#aaa9c2;--purple:#a855f7;--pink:#ec4899;--white:#f8f7ff}
-*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 80% 0%,#35145b 0,transparent 38%),var(--bg);color:var(--white);font-family:Arial,Helvetica,sans-serif}
-header{padding:22px max(5vw,20px);display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #ffffff15;position:sticky;top:0;background:#090914dd;backdrop-filter:blur(12px);z-index:5}
-.logo{font-weight:900;letter-spacing:1.5px;font-size:clamp(17px,3vw,25px)}.logo span{color:#d879ff}
-nav a{color:#d9d5eb;text-decoration:none;margin-left:22px;font-size:14px}
-main{max-width:1100px;margin:auto;padding:0 22px}.hero{padding:75px 0 50px;display:grid;grid-template-columns:1.3fr .7fr;gap:25px;align-items:center}
-.kicker{color:#d879ff;text-transform:uppercase;letter-spacing:3px;font-size:12px;font-weight:bold}.hero h1{font-size:clamp(38px,7vw,76px);line-height:.98;margin:14px 0}.hero h1 em{font-style:normal;background:linear-gradient(90deg,#c084fc,#f472b6);color:transparent;background-clip:text}
-.hero p{color:var(--muted);line-height:1.7;max-width:540px}.disc{width:min(270px,70vw);aspect-ratio:1;border-radius:50%;margin:auto;background:repeating-radial-gradient(circle,#151520 0 5px,#252238 6px 7px);box-shadow:0 0 65px #a855f755;display:grid;place-items:center;animation:spin 18s linear infinite}.disc:before{content:"";width:34%;aspect-ratio:1;border-radius:50%;background:linear-gradient(135deg,#a855f7,#ec4899);border:8px solid #11111e}.disc:after{content:"X";position:absolute;font-size:27px;font-weight:bold;color:white}@keyframes spin{to{transform:rotate(360deg)}}
-.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.btn{border:0;border-radius:30px;padding:12px 19px;background:linear-gradient(90deg,var(--purple),var(--pink));color:white;font-weight:bold;cursor:pointer;text-decoration:none;font-size:14px}.btn.secondary{background:#ffffff10;border:1px solid #ffffff25}
-section{padding:28px 0 45px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:15px;margin-bottom:20px}.section-head h2{font-size:27px;margin:7px 0}.section-head p{color:var(--muted);font-size:13px;margin:0}.search{background:#ffffff0d;border:1px solid #ffffff20;color:white;border-radius:25px;padding:12px 16px;width:min(260px,48vw);outline:none}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.card{background:linear-gradient(145deg,#19192d,#11111e);border:1px solid #ffffff12;border-radius:17px;padding:14px;min-width:0}.cover{aspect-ratio:1.5;border-radius:12px;background:linear-gradient(135deg,#3b1767,#a8328b);display:grid;place-items:center;font-size:45px;position:relative;overflow:hidden}.cover:after{content:"";position:absolute;width:140px;height:140px;border:1px solid #ffffff25;border-radius:50%;box-shadow:0 0 0 18px #ffffff09,0 0 0 38px #ffffff07}.songtitle{font-weight:bold;margin:14px 0 5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.meta{color:var(--muted);font-size:12px}.card audio{width:100%;height:36px;margin-top:13px}.empty{color:var(--muted);border:1px dashed #ffffff30;padding:25px;border-radius:14px;text-align:center;grid-column:1/-1;line-height:1.7}
-.upload{background:#ffffff08;border:1px solid #ffffff18;border-radius:18px;padding:22px;display:flex;justify-content:space-between;align-items:center;gap:20px}.upload p{color:var(--muted);font-size:13px;line-height:1.6;margin-bottom:0}.upload input{display:none}footer{text-align:center;padding:30px 20px;border-top:1px solid #ffffff15;color:#85839e;font-size:12px}
-@media(max-width:700px){header{padding:17px 18px}nav a{margin-left:12px;font-size:12px}.hero{grid-template-columns:1fr;padding:55px 0 35px}.disc{grid-row:1;width:175px}.hero-copy{text-align:center}.hero p{margin-left:auto;margin-right:auto}.actions{justify-content:center}.grid{grid-template-columns:repeat(2,1fr)}.upload{align-items:flex-start;flex-direction:column}}
-@media(max-width:430px){.grid{grid-template-columns:1fr 1fr;gap:10px}.card{padding:10px}.cover{font-size:32px}.section-head{align-items:flex-start;flex-direction:column}.search{width:100%}}
-</style></head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XIBOINX BARBIRBER</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #101018;
+      color: white;
+    }
+    header {
+      text-align: center;
+      padding: 30px 15px;
+      background: linear-gradient(135deg, #6a00ff, #e60073);
+    }
+    header h1 { margin: 0 0 10px; }
+    header p { margin: 0; }
+    main { max-width: 1000px; margin: auto; padding: 20px; }
+    input, select {
+      width: 100%;
+      padding: 13px;
+      margin: 8px 0;
+      border: 0;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+    .categories {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 15px 0;
+    }
+    .categories button, .download {
+      padding: 11px 15px;
+      border: 0;
+      border-radius: 8px;
+      background: #a000ff;
+      color: white;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .categories button:hover, .download:hover {
+      background: #e60073;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 15px;
+    }
+    .card {
+      background: #20202c;
+      border-radius: 12px;
+      padding: 18px;
+      overflow-wrap: anywhere;
+    }
+    .card h3 { margin-top: 0; }
+    .tag { color: #d3aaff; font-size: 13px; }
+    .notice { color: #ccc; line-height: 1.6; }
+    footer { text-align: center; padding: 25px; color: #aaa; }
+  </style>
+</head>
 <body>
-<header><div class="logo">XIBOINX<span>BARBIRBER</span></div><nav><a href="#koleksi">Koleksi</a><a href="#tambah">Tambah Lagu</a></nav></header>
-<main>
-<div class="hero"><div class="hero-copy"><div class="kicker">Ruang musik pribadi</div><h1>Putar Cerita,<br><em>Rasakan Musik.</em></h1><p>Selamat datang di XIBOINXBARBIRBER — rumah untuk menyimpan dan menikmati lagu-lagu kreasi sendiri. Dari nada pertama sampai kenangan yang tak terlupakan.</p><div class="actions"><a class="btn" href="#koleksi">▶ Jelajahi Lagu</a><a class="btn secondary" href="#tambah">＋ Tambah Koleksi</a></div></div><div class="disc"></div></div>
-<section id="koleksi"><div class="section-head"><div><div class="kicker">Playlist kamu</div><h2>Koleksi Lagu</h2><p>Pilih lagu untuk diputar atau cari judul favoritmu.</p></div><input id="search" class="search" placeholder="⌕  Cari lagu..." oninput="render()"></div><div class="grid" id="songs"><div class="empty">🎵 Koleksi lagu kamu akan tampil di sini.<br>Gunakan tombol “Tambah Lagu” untuk memilih file audio dari perangkatmu.</div></div></section>
-<section id="tambah"><div class="kicker">Perbarui playlist</div><h2>Tambah Lagu Kamu</h2><div class="upload"><div><strong>🎧 Masukkan file musik</strong><p>Pilih file MP3, WAV, atau audio lain dari perangkatmu. Lagu yang dipilih akan muncul di daftar selama halaman ini dibuka.</p></div><label class="btn" for="files">＋ Pilih Lagu</label><input id="files" type="file" accept="audio/*" multiple onchange="addFiles(event)"></div></section>
-</main><footer>© <span id="year"></span> XIBOINXBARBIRBER · Dibuat untuk menikmati karya musik.</footer>
-<script>
-let songs=[];function addFiles(e){for(const f of e.target.files){if(f.type.startsWith('audio/'))songs.push({name:f.name.replace(/\.[^.]+$/,''),url:URL.createObjectURL(f),size:(f.size/1048576).toFixed(1)+' MB'});}render();e.target.value='';document.querySelector('#koleksi').scrollIntoView({behavior:'smooth'});}
-function render(){let q=document.querySelector('#search').value.toLowerCase(),el=document.querySelector('#songs');let list=songs.filter(s=>s.name.toLowerCase().includes(q));if(!list.length){el.innerHTML='<div class="empty">🎵 '+(songs.length?'Tidak ada lagu dengan judul itu.':'Belum ada lagu ditambahkan. Pilih file audio di bagian Tambah Lagu.')+'</div>';return;}el.innerHTML=list.map((s,i)=>`<article class="card"><div class="cover">♫</div><div class="songtitle" title="${escapeHtml(s.name)}">${escapeHtml(s.name)}</div><div class="meta">Koleksi pribadi · ${s.size}</div><audio controls preload="none" src="${s.url}"></audio></article>`).join('');}
-function escapeHtml(s){return s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
-document.querySelector('#year').textContent=new Date().getFullYear();
-</script></body></html>
+  <header>
+    <h1>🎬 XIBOINX BARBIRBER</h1>
+    <p>Tempat mencari film, musik, gambar, dan game!</p>
+  </header>
+
+  <main>
+    <h2>🔎 Cari File Favoritmu</h2>
+    <input id="search" type="search"
+      placeholder="Ketik nama film, lagu, gambar, atau game..."
+      oninput="render()">
+
+    <div class="categories">
+      <button onclick="setCategory('Semua')">Semua</button>
+      <button onclick="setCategory('Film')">🎬 Film</button>
+      <button onclick="setCategory('Musik')">🎵 Lagu & Musik</button>
+      <button onclick="setCategory('Gambar')">🖼️ Gambar</button>
+      <button onclick="setCategory('Game')">🎮 Game</button>
+    </div>
+
+    <h2>📂 Koleksi File</h2>
+    <div id="files" class="grid"></div>
+
+    <p class="notice">
+      File yang tersedia di sini harus milik sendiri, diizinkan pemiliknya,
+      atau berasal dari sumber yang menyediakan unduhan secara legal.
+    </p>
+
+    <h2>🌐 Cari di Internet</h2>
+    <p class="notice">
+      Cari file atau konten melalui mesin pencari. Pastikan sumbernya
+      resmi dan unduhannya diizinkan.
+    </p>
+    <form action="https://www.google.com/search" method="get" target="_blank">
+      <input name="q" placeholder="Cari film, musik, gambar, atau game...">
+      <button class="download" type="submit">Cari di Google</button>
+    </form>
+  </main>
+
+  <footer>© XIBOINX BARBIRBER</footer>
+
+  <script>
+    // Contoh koleksi. Nanti bisa diganti dengan file milikmu.
+    const items = [
+      {
+        name: "Contoh Lagu",
+        category: "Musik",
+        description: "Ganti dengan lagu yang kamu miliki.",
+        url: ""
+      },
+      {
+        name: "Contoh Gambar",
+        category: "Gambar",
+        description: "Ganti dengan gambar milikmu.",
+        url: ""
+      },
+      {
+        name: "Contoh Game",
+        category: "Game",
+        description: "Tambahkan tautan game yang legal.",
+        url: ""
+      },
+      {
+        name: "Contoh Film",
+        category: "Film",
+        description: "Tambahkan film yang boleh dibagikan.",
+        url: ""
+      }
+    ];
+
+    let selected = "Semua";
+
+    function setCategory(category) {
+      selected = category;
+      render();
+    }
+
+    function render() {
+      const query = document.getElementById("search").value.toLowerCase();
+      const filtered = items.filter(item =>
+        (selected === "Semua" || item.category === selected) &&
+        (item.name + " " + item.description).toLowerCase().includes(query)
+      );
+
+      document.getElementById("files").innerHTML = filtered.length
+        ? filtered.map(item => `
+          <div class="card">
+            <div class="tag">${item.category}</div>
+            <h3>${item.name}</h3>
+            <p>${item.description}</p>
+            ${item.url
+              ? `<a class="download" href="${item.url}" target="_blank"
+                   rel="noopener noreferrer">DOWNLOAD</a>`
+              : `<span class="tag">File belum ditambahkan</span>`}
+          </div>
+        `).join("")
+        : "<p>File tidak ditemukan.</p>";
+    }
+
+    render();
+  </script>
+</body>
+</html>
+```
